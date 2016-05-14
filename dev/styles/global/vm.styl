@@ -1,0 +1,125 @@
+//============== VARIABLES ==============//
+
+$min-width = 960px
+$footer-height = 100px
+$footer-margin-top = 50px
+
+
+$link = #385fa2
+$border = #cfcfcf
+
+$bg-gray = #f4f4f4
+
+$blue = #0089cd
+$red = #d64a49
+$black = #000
+$white = #fff
+
+//============== MIXINS ==============//
+
+clearfix()
+  &:before
+  &:after
+    content ''
+    display table
+    clear both
+
+anim()
+  transition all 0.25s ease-out
+
+smooth()
+  -webkit-transform translate3d(0, 0, 0)
+  -webkit-backface-visibility hidden
+  -webkit-perspective 1000
+
+font(fz, lh)
+  font-size fz
+  line-height lh
+
+regular()
+  font-family 'ProximaNova-Regular'
+  font-weight normal
+  font-style normal
+light()
+  font-family 'ProximaNova-Light'
+  font-weight normal
+  font-style normal
+bold()
+  font-family 'ProximaNova-Extrabld'
+  font-weight normal
+  font-style normal
+
+icon()
+  font-family: 'eltom' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+gradient-red()
+  background: rgba(237,29,36,1);
+  background: -moz-linear-gradient(top, rgba(237,29,36,1) 0%, rgba(216,27,33,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,29,36,1)), color-stop(100%, rgba(216,27,33,1)));
+  background: -webkit-linear-gradient(top, rgba(237,29,36,1) 0%, rgba(216,27,33,1) 100%);
+  background: -o-linear-gradient(top, rgba(237,29,36,1) 0%, rgba(216,27,33,1) 100%);
+  background: -ms-linear-gradient(top, rgba(237,29,36,1) 0%, rgba(216,27,33,1) 100%);
+  background: linear-gradient(to bottom, rgba(237,29,36,1) 0%, rgba(216,27,33,1) 100%);
+
+gradient-gray()
+  background: rgba(250,250,250,1);
+  background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(214,214,214,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(100%, rgba(214,214,214,1)));
+  background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(214,214,214,1) 100%);
+  background: -o-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(214,214,214,1) 100%);
+  background: -ms-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(214,214,214,1) 100%);
+  background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(214,214,214,1) 100%);
+
+//
+// TRIANGLE
+// ========
+// https://github.com/jackbrewer/stylus-mixins/blob/master/docs/triangle.md
+triangle($point = 'up', $size = 1em, $color = #777)
+
+  if $size is a 'unit' && $color is a 'color'
+
+    if $point == 'up'
+      _triangle-borders({top: '', right: transparent, bottom: solid, left: transparent}, $size, $color)
+    else if $point == 'right'
+      _triangle-borders({top: transparent, right: '', bottom: transparent, left: solid}, $size, $color)
+    else if $point == 'down'
+      _triangle-borders({top: solid, right: transparent, bottom: '', left: transparent}, $size, $color)
+    else if $point == 'left'
+      _triangle-borders({top: transparent, right: solid, bottom: transparent, left: ''}, $size, $color)
+    else if $point == 'up-left'
+      $size = ($size / 2)
+      _triangle-borders({top: solid, right: transparent, bottom: transparent, left: solid}, $size, $color)
+    else if $point == 'up-right'
+      $size = ($size / 2)
+      _triangle-borders({top: solid, right: solid, bottom: transparent, left: transparent}, $size, $color)
+    else if $point == 'down-right'
+      $size = ($size / 2)
+      _triangle-borders({top: transparent, right: solid, bottom: solid, left: transparent}, $size, $color)
+    else if $point == 'down-left'
+      $size = ($size / 2)
+      _triangle-borders({top: transparent, right: transparent, bottom: solid, left: solid}, $size, $color)
+
+
+//
+// TRIANGLE BORDERS
+// This mixin should not be called directly
+//
+
+_triangle-borders($sides, $size, $color)
+
+  width 0
+  height 0
+
+  for $side, $style in $sides
+    if $style == solid
+      border-{$side} $size solid $color
+    else if $style == transparent
+      border-{$side} $size solid transparent

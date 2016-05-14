@@ -1,0 +1,219 @@
+// Fonts
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('../fonts/ProximaNova-Light.eot');
+  src: url('../fonts/ProximaNova-Light.otf') format('opentype'),
+       url('../fonts/ProximaNova-Light.woff') format('woff'),
+       url('../fonts/ProximaNova-Light.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg'),
+       url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova-Extrabld';
+  src: url('../fonts/ProximaNova-Extrabld.eot');
+  src: url('../fonts/ProximaNova-Extrabld.otf') format('opentype'),
+       url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+       url('../fonts/ProximaNova-Extrabld.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Extrabld.svg#ProximaNova-Extrabld') format('svg'),
+       url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url("../fonts/ProximaNova-Regular.otf") format("opentype"),
+       url('../fonts/ProximaNova-Regular.woff') format('woff'),
+       url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'),
+       url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'eltom';
+    src:
+        url('../fonts/icons/fonts/eltom.ttf?pk69if') format('truetype'),
+        url('../fonts/icons/fonts/eltom.woff?pk69if') format('woff'),
+        url('../fonts/icons/fonts/eltom.svg?pk69if#eltom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'eltom' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+    content: "\e900";
+}
+.icon-icon-1:before {
+    content: "\e901";
+}
+.icon-icon-2:before {
+    content: "\e902";
+}
+.icon-icon-3:before {
+    content: "\e903";
+}
+.icon-icon-4:before {
+    content: "\e904";
+}
+.icon-icon-5:before {
+    content: "\e905";
+}
+.icon-icon-6:before {
+    content: "\e906";
+}
+.icon-icon-7:before {
+    content: "\e907";
+}
+.icon-icon-8:before {
+    content: "\e908";
+}
+.icon-icon-9:before {
+    content: "\e909";
+}
+.icon-list:before {
+    content: "\e90a";
+}
+.icon-locate:before {
+    content: "\e90b";
+}
+.icon-send:before {
+    content: "\e90c";
+}
+
+
+// Selection
+selection()
+  background #000
+  color #fff
+::-moz-selection{selection()}
+::selection{selection()}
+
+// Placeholder
+placeholder()
+  color #999
+  font-style italic
+placeholderFocus()
+  visibility hidden
+::-webkit-input-placeholder,textarea::-webkit-input-placeholder
+  placeholder()
+::-moz-placeholder,textarea::-moz-placeholder
+  placeholder()
+:-ms-input-placeholder,textarea:-ms-input-placeholder
+  placeholder()
+input:-moz-placeholder,textareainput:-moz-placeholder
+  placeholder()
+input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder
+  placeholderFocus()
+input:focus:-moz-placeholder,textarea:focus:-moz-placeholder
+  placeholderFocus()
+input:focus::-moz-placeholder,textarea:focus::-moz-placeholder
+  placeholderFocus()
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
+  placeholderFocus()
+
+// Base elements
+b, strong
+  bold()
+
+.headling
+  bold()
+  position relative
+  font-size 32px
+  line-height 1
+  text-align center
+  padding 60px 0
+  &:after, &:before
+    content ''
+    position absolute
+    left 50%
+    height 1px
+    width 50px
+    background $red
+  &:before
+    bottom 28px
+  &:after
+    bottom 25px
+  &.large
+    font-size 44px
+    padding 50px 0
+    &:before
+      bottom 32px
+    &:after
+      bottom 35px
+
+.button-send
+  position relative
+  overflow hidden
+  color #fff
+  font-size 18px
+  bold()
+  border-radius 5px
+  height 45px
+  line-height 45px
+  width 250px
+  display inline-block
+  vertical-align middle
+  box-shadow inset 0px -1px 0 1px #ed1d24, 1px 2px 0 -1px rgba(187, 24, 30, .25)
+  .icon-send
+    position relative
+    display inline-block
+    vertical-align middle
+    font-size 30px
+    top -3px
+    margin-right 5px
+    z-index 1
+  .label
+    position relative
+    z-index 1
+  .bg-normal, .bg-hover
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    border-radius 5px
+  .bg-normal
+    gradient-red()
+    opacity 1
+    anim()
+  .bg-hover
+    background #d91b22
+    opacity 0
+    transition opacity .5s ease-in
+  &:hover
+    .bg-normal
+      opacity 0
+      transition opacity .75s ease-in
+    .bg-hover
+      opacity 1
+      transition opacity .25s ease-in
+  &:active
+    top 1px
+    box-shadow none
+    .bg-hover
+      box-shadow inset 1px 2px 3px 0px rgb(187, 24, 30)
+
+

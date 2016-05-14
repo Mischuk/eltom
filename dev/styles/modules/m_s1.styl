@@ -1,0 +1,94 @@
+.m_s1
+  position relative
+  margin-bottom 50px
+  .images-container
+    visibility hidden
+    width 0
+    height 0
+    opacity 0
+    overflow hidden
+  .main-nav
+    float left
+    width 250px
+    height 390px
+    margin-right 15px
+    border 3px solid $blue
+    border-radius 5px
+    padding 10px
+    li
+      padding-left 13px
+      position relative
+      &:before
+        content ''
+        background: url('../images/sprite.png') no-repeat -60px -60px;
+        width: 4px;
+        height: 7px;
+        position absolute
+        left 0
+        top 14px
+        transition all .25s ease-in
+        transform translateX(0)
+      &:hover
+        &:before
+          transition all .25s ease-out
+          opacity 0
+          transform translateX(5px)
+    a
+      color $link
+      display inline-block
+      vertical-align middle
+      padding 8px 0
+      span
+        border-bottom 1px solid #c1cde2
+      &:hover
+        span
+          border-color $white
+  article
+    float left
+    width 735px
+    > .image
+      float left
+      width 360px
+      height 390px
+      line-height 390px
+      border 1px solid $border
+      border-radius 5px
+      > a
+        display block
+        width 100%
+        height 100%
+        text-align center
+        img
+          display inline-block
+          vertical-align middle
+    > .description
+      position relative
+      float right
+      width 360px
+      height 390px
+      p
+        margin-top 0
+        margin-bottom 20px
+      .lead-hook
+        position absolute
+        left 0
+        bottom 0
+        width 100%
+        height 155px
+        background $blue
+        color #fff
+        border-radius 5px
+        text-align center
+        padding 13px 0
+        > p
+          line-height 1.2
+          margin-bottom 12px
+        .send
+          margin-bottom 12px
+        .tel
+          font-size 18px
+          a
+            bold()
+            color #fff
+            text-decoration none
+            cursor default

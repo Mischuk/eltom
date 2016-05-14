@@ -1,0 +1,30 @@
+.m_fixed-menu
+  gradient-gray()
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 45px
+  box-shadow 0 0 5px rgba(0,0,0,.25)
+  z-index 10
+  transform translateY(-120%)
+  anim()
+  text-align center
+  ul
+    padding 5px 0
+    display inline-block
+    vertical-align middle
+  li
+    display inline-block
+    vertical-align middle
+    margin 5px 10px
+    a
+      display inline-block
+      vertical-align middle
+      font-size 14px
+      line-height 1
+      color $link
+      border-bottom 1px solid #c1cde2
+    &.current a
+      color $red
+      border-color transparent
