@@ -71,7 +71,8 @@ gulp.task('serve', ['html', 'js', 'images', 'styles', 'vendor'], function() {
     browserSync.init({
         open: false,
         notify: true,
-        tunnel: false,
+        // tunnel: false,
+        tunnel: 'eltom',
         server: {
             baseDir: "./app"
         }

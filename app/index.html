@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html class="unload">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="shortcut icon" type="image/png" href="favico.png"/>
-    <title>Document</title>
+    <title>Выключатель LBI</title>
     <!-- Styles -->
-    <link href="../styles/vendor.css" rel="stylesheet" media="all">
-    <link href="../styles/app.css" rel="stylesheet" media="all">
+    <link href="styles/vendor.css" rel="stylesheet" media="all">
+    <link href="styles/app.css" rel="stylesheet" media="all">
     <!-- Javascript -->
-    <script src="../scripts/plugins.js"></script>
-    <script src="../scripts/app.js"></script>
+    <script src="scripts/plugins.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
-<body>
+<body class="unload">
+    <div id="page-preloader">
+        <div class="text"></div>
+        <div class="logo"></div>
+    </div>
+    <div id="modal-form" class="mfp-hide white-popup-block">
+        <div class="header">Отправьте запрос нашему менеджеру</div>
+        <form>
+            <div class="fgroup">
+                <input class="text" id="mf-username" type="text" placeholder="Ваше имя">
+            </div>
+            <div class="fgroup">
+                <input class="email" id="mf-email" type="email" placeholder="Ваш e-mail">
+            </div>
+            <div class="fgroup">
+                <p>Если хотите, чтобы мы Вам перезвонили, то укажите свой номер телефона</p>
+                <input class="tel" type="tel" placeholder="Номер телефона">
+            </div>
+            <div class="fgroup">
+                <textarea class="textarea" placeholder="Напишите Ваш вопрос"></textarea>
+            </div>
+            <div class="fgroup attach">
+                <label class="add-photo-btn"><span class="attach-button">Прикрепить файл</span><span class="file-found">Никакой файл еще не прикреплен</span><span><input type="file" id="myfile" name="myfile" /></span></label>
+            </div>
+            <div class="fgroup">
+                <a href="#" class="button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="label">Отправить</span></a>
+            </div>
+        </form>
+    </div>
     <div class="m_fixed-menu">
         <div class="wrapper">
             <ul id="nav">
                 <li><a href="#s2"><span>Преимущества</span></a></li>
                 <li><a href="#s3"><span>Характеристики</span></a></li>
-                <li><a href="#s4"><span>Варианты применяемых приводов</span></a></li>
+                <li><a href="#s4"><span>Варианты <span class="small-hide">применяемых</span> приводов</span></a></li>
                 <li><a href="#s5"><span>Тыльный выключатель</span></a></li>
                 <li><a href="#s6"><span>LBI</span></a></li>
-                <li><a href="#s7"><span>Замена старых ВН на LBI</span></a></li>
+                <li><a href="#s7"><span>Замена <span class="small-hide">старых ВН на LBI</span></span></a></li>
                 <li><a href="#s8"><span>Документация</span></a></li>
             </ul>
         </div>
@@ -46,7 +74,7 @@
                         <a href="#">+7 (921) 181-33-16</a>
                     </div>
                     <div class="callback">
-                        <a href="#">Заказать звонок</a>
+                        <a class="modal" href="#modal-form">Заказать звонок</a>
                     </div>
                 </div>
             </div>
@@ -69,13 +97,13 @@
             </nav>
             <article>
                 <div class="image">
-                    <a href="#"><img src="../images/3.jpg" alt=""></a>
+                    <a href="images/3.jpg" class="gallery-item" title="Текстовое описание первого слайда"><img src="images/3.jpg" alt=""></a>
                 </div>
                 <div class="images-container">
-                    <a href="#"><img src="../images/1/1.jpg" alt=""></a>
-                    <a href="#"><img src="../images/1/2.jpg" alt=""></a>
-                    <a href="#"><img src="../images/1/3.jpg" alt=""></a>
-                    <a href="#"><img src="../images/1/4.jpg" alt=""></a>
+                    <a href="images/1/1.jpg" class="gallery-item" title="Текстовое описание второго слайда"><img src="images/1/1.jpg" alt=""></a>
+                    <a href="images/1/2.jpg" class="gallery-item" title="Текстовое описание третьего слайда"><img src="images/1/2.jpg" alt=""></a>
+                    <a href="images/1/3.jpg" class="gallery-item" title=""><img src="images/1/3.jpg" alt=""></a>
+                    <a href="images/1/4.jpg" class="gallery-item" title="Текстовое описание пятого слайда"><img src="images/1/4.jpg" alt=""></a>
                 </div>
                 <div class="description">
                     <p>Выключатель нагрузки LBI  - современное и экономически обоснованное решение для  электрических подстанций. </p>
@@ -83,7 +111,7 @@
                     <div class="lead-hook">
                         <p>Отправьте Ваш запрос и получите<br>индивидуальное предложение</p>
                         <div class="send">
-                            <a href="#" class="button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a>
+                            <a href="#modal-form" class="button-send modal"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a>
                         </div>
                         <div class="tel">
                             <span>Позвонить:</span>
@@ -94,12 +122,416 @@
             </article>
         </div>
     </section>
-    <section id="s2" class="m_s2" style="height: 500px">2</section>
-    <section id="s3" class="m_s2" style="height: 500px">3</section>
-    <section id="s4" class="m_s2" style="height: 500px">4</section>
-    <section id="s5" class="m_s2" style="height: 500px">5</section>
-    <section id="s6" class="m_s2" style="height: 500px">6</section>
-    <section id="s7" class="m_s2" style="height: 500px">7</section>
-    <section id="s8" class="m_s2" style="height: 500px">8</section>
+    <section id="s2" class="m_s2">
+        <div class="wrapper">
+            <h2 class="headling">Преимущества выключателя нагрузки LBI</h2>
+            <div class="columns top">
+                <div class="col-1-of-3">
+                    <div class="icon">
+                        <span class="icon-icon-1"></span>
+                    </div>
+                    <p>Механический ресурс<br>2 000 циклов</p>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="icon">
+                        <span class="icon-icon-2"></span>
+                    </div>
+                    <p>Межсервисный интервал<br>3 года</p>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="icon">
+                        <span class="icon-icon-3"></span>
+                    </div>
+                    <p>Гарантия 5 лет</p>
+                </div>
+            </div>
+            <div class="columns bottom">
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="icon">
+                            <span class="icon-icon-4"></span>
+                        </div>
+                        <div class="description">
+                            <span>3 вида блокировки:</span>
+                            <ul>
+                                <li>на рукоятке на валу;</li>
+                                <li>заземляющего ножа;</li>
+                                <li>автоматическая блокировка;</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="icon">
+                            <span class="icon-icon-5"></span>
+                        </div>
+                        <div class="description">Возможность монтажа приводов соединительной тяги с поступательным (ПР-10), вращательным (NR-1) движением, либо привода с отсутствием тяги (Т)</div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="icon">
+                            <span class="icon-icon-6"></span>
+                        </div>
+                        <div class="description">Легкая интеграция в системы телемаханики с возможностью контроля и управления</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="icon">
+                            <span class="icon-icon-7"></span>
+                        </div>
+                        <div class="description">Возможность защиты трансформатора мощностью 1250 кВА</div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="icon">
+                            <span class="icon-icon-8"></span>
+                        </div>
+                        <div class="description">Возможность выбора стороны монтажа привода (левая/правая)</div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="icon">
+                            <span class="icon-icon-9"></span>
+                        </div>
+                        <div class="description">Легкость изменения<br>конфигураций</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="s3" class="m_s3">
+        <div class="wrapper">
+            <h2 class="headling">Номинальные характеристики</h2>
+            <table>
+                <tr><th>№</th><th>Параметр</th><th>Значение</th></tr>
+                <tr><td>1.</td><td>Номинальное рабочее напряжение</td><td>12 кВ</td></tr>
+                <tr><td>2.</td><td>Номинальная частота</td><td>50 Гц</td></tr>
+                <tr><td>3.</td><td>Номинальный длительный ток</td><td>630 А</td></tr>
+                <tr><td>4.</td><td>Номинальный проходящий ток</td><td>700 А</td></tr>
+                <tr>
+                    <td>5.</td>
+                    <td colspan="2">
+                        <p>Рабочая коммутационная способность:</p>
+                        <table>
+                            <tr>
+                                <td>в цепи с малой индукцией</td>
+                                <td>630 А</td>
+                            </tr>
+                            <tr>
+                                <td>в цепи кольцевой сети;</td>
+                                <td>630 А</td>
+                            </tr>
+                            <tr>
+                                <td>нагрузки кабелей и воздушных линий</td>
+                                <td>50 А</td>
+                            </tr>
+                            <tr>
+                                <td>трансформаторов без нагрузки мощностью до:</td>
+                                <td>1250 кВА</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td>6.</td><td>Максимальная величина вставки предохранителя</td><td>100 А</td></tr>
+                <tr><td>7.</td><td>Номинальный предельный ток короткого замыкания</td><td>40 кА</td></tr>
+                <tr><td>8.</td><td>Выдерживаемый пиковый ток</td><td>40 кА</td></tr>
+                <tr><td>9.</td><td>Ток короткого замыкания выдерживаемый 1-сек.</td><td>20 кА</td></tr>
+                <tr><td>10.</td><td>Активное сопротивление токоведущего узла</td><td>60 мкОм</td></tr>
+                <tr>
+                    <td>11.</td>
+                    <td colspan="2">
+                        <p>Испытательное напряжение (50 Гц) изоляции:</p>
+                        <table>
+                            <tr>
+                                <td>на землю и между полюсами</td>
+                                <td>28 кВ</td>
+                            </tr>
+                            <tr>
+                                <td>между клеммами</td>
+                                <td>32 кВ</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td colspan="2">
+                        <p>Ударное испытательное напряжение изоляции</p>
+                        <table>
+                            <tr>
+                                <td>на землю и между полюсами</td>
+                                <td>75 кВ</td>
+                            </tr>
+                            <tr>
+                                <td>между клеммами</td>
+                                <td>85 кВ</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td colspan="2">
+                        <p>Масса выключателя-разъединителя:</p>
+                        <table>
+                            <tr>
+                                <td>без заземлителя</td>
+                                <td>27 кг</td>
+                            </tr>
+                            <tr>
+                                <td>с заземлителем</td>
+                                <td>32 кг</td>
+                            </tr>
+                            <tr>
+                                <td>комлекта выключателя с предохранителями</td>
+                                <td>39 кг</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td>14.</td><td>Механический ресурс</td><td>2000 циклов</td></tr>
+
+            </table>
+        </div>
+    </section>
+
+    <div class="m_hook">
+        <div class="wrapper">
+            <div class="helper-parent">
+                <div class="helper">
+                    <p>Отправьте Ваш запрос и получите индвидуальное предложение</p>
+                    <div class="send">
+                        <a href="#modal-form" class="modal button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a>
+                    </div>
+                    <div class="tel">
+                        <span>Позвонить:</span>
+                        <a href="#">+7 (921) 181-33-16</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="s4" class="m_s4">
+        <div class="wrapper">
+            <h2 class="headling">Варианты применяемых приводов</h2>
+            <div class="columns">
+                <div class="col-1-of-2">
+                    <div class="image">
+                        <a href="images/4.jpg" class="gallery-item-second" title="Текстовое описание 1го слайда"><img src="images/4.jpg" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <ul class="blue-markers">
+                            <li>Простая конструкция</li>
+                            <li>Легкость монтажа и сцепления с аппаратами</li>
+                            <li>Большая прочность и безотказность действия</li>
+                            <li>Малые габариты</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="image">
+                        <a href="images/5.jpg" class="gallery-item-second" title="Текстовое описание 2го слайда"><img src="images/5.jpg" alt=""></a>
+                    </div>
+                    <div class="description">
+                        <ul class="blue-markers">
+                            <li>Возможность замены ручного вращательно-поворотного привода NR-1 или рубящего привода ПР-10<span class="blue">*</span> на двигательный привод NSW30<span class="red">*</span> без необходимости изменений в существующем распределительном устройстве (идентичная расстановка монтажных отверстий и форм ведомого вала)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="s5" class="m_s5">
+        <div class="wrapper">
+            <h2 class="headling">Тыльный выключатель</h2>
+            <p class="large">Основное преимущество: отсутствие тяги, связывающей привод с валом выключателя.<br>Ручка привода одевается на вал выключателя.</p>
+            <div class="image"><a href="images/6.jpg" class="gallery-item-third" title="Текстовое описание 1го слайда"><img src="images/6.jpg" alt=""></a></div>
+        </div>
+    </section>
+
+    <div class="m_hook">
+        <div class="wrapper">
+            <div class="helper-parent">
+                <div class="helper">
+                    <p>Отправьте Ваш запрос и получите индвидуальное предложение</p>
+                    <div class="send">
+                        <a href="#modal-form" class="modal button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a>
+                    </div>
+                    <div class="tel">
+                        <span>Позвонить:</span>
+                        <a href="#">+7 (921) 181-33-16</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="s6" class="m_s6">
+        <div class="wrapper">
+            <h2 class="headling">LBI: проверенные решение ретрофита</h2>
+            <div class="problems">
+                <a class="modal" href="#modal-problems">Проблемы старых выключателей</a>
+                <div id="modal-problems" class="mfp-hide white-popup-block">
+                    <h2 class="headling">Основные проблемы заказчика, связанные с использованием ВН</h2>
+                    <div class="columns">
+                        <div class="col-1-of-2">
+                            <ul class="blue-markers">
+                                <li>Морально устаревшие ВН;</li>
+                                <li>Низкий коммутационный ресурс;</li>
+                                <li>Привода старых ВН «закисают» от времени;</li>
+                            </ul>
+                        </div>
+                        <div class="col-1-of-2">
+                            <ul class="blue-markers">
+                                <li>Покрытие силовых контактов имеет большое электрическое сопротивление, требует дополнительного обслуживания (обработку) при сервисном обслуживании; </li>
+                                <li>Коррозия частей ВН, изготовленных из стали; </li>
+                                <li>Короткий межремонтный цикл.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="large">Предлагаемые решения являются результатом встреч с представителями<br>эксплуатационных отделов сетей и подстанций среднего напряжения.</p>
+            <h3>Эффективность решений подтверждена.</h3>
+            <ul class="columns blue-markers">
+                <li class="col-1-of-3">Замена ВН (ВН-16, ВНр, ВНпм, Вна) на ВН LBI в ячейках КСО-366, -386, -292, -272</li>
+                <li class="col-1-of-3">
+                    Замена камер «под ключ» на новые
+                    с ВН LBI:
+                    <ul>
+                        <li>КСО-366 на КСО-210</li>
+                        <li>КСО-386 на КСО-210</li>
+                        <li>КСО-366 на КСО-386</li>
+                    </ul>
+                </li>
+                <li class="col-1-of-3">Решение для подстанций этажного типа (дистанционное управление удлиненной тягой)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="s7" class="m_s7">
+        <div class="wrapper">
+            <h2 class="headling">Замена BH на LBI</h2>
+            <p class="large">Предлагаемые решения позволяют достичь поставленных задач в части<br>повышения эффективности работы ЗРУ после реконструкции.</p>
+            <div class="columns">
+                <div class="col-1-of-2">
+                    <ul class="blue-markers">
+                        <li>Простая и несложная замена аппаратов старого типа с возможностью использования существующих приводов; </li>
+                        <li>Низкие материальные затраты в связи с быстрой заменой изношенного аппарата (минимальное время отключения, необходимое для замены); </li>
+                        <li>Соответствие расстояний между монтажными отверстиями в основании;</li>
+                    </ul>
+                </div>
+                <div class="col-1-of-2">
+                    <ul class="blue-markers">
+                        <li>Соответствие расстояний токовых присоединений;</li>
+                        <li>Возможность выбора стороны установки привода (левая/правая);</li>
+                        <li>Возможность выбора типа привода.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="m_hook">
+        <div class="wrapper">
+            <div class="helper-parent">
+                <div class="helper">
+                    <p>Отправьте Ваш запрос и получите индвидуальное предложение</p>
+                    <div class="send">
+                        <a href="#modal-form" class="modal button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a>
+                    </div>
+                    <div class="tel">
+                        <span>Позвонить:</span>
+                        <a href="#">+7 (921) 181-33-16</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="s8" class="m_s8">
+        <div class="docs">
+            <div class="wrapper">
+                <h2 class="headling">Документация</h2>
+                <ul class="download">
+                    <li><a href="#" class="pdf"><span class="helper">Опросный лист на выключатель нагрузки LBI 12-24 кВ</span></a></li>
+                    <li><a href="#" class="xls"><span class="helper">Техническое описание LBI 12-24 кВ</span></a></li>
+                    <li><a href="#" class="doc"><span class="helper">Сертификат<br>на LBI 12-24 кВ</span></a></li>
+                    <li><a href="#" class="pdf"><span class="helper">Листовка LBI 12-24 кВ</span></a></li>
+                    <li><a href="#" class="pdf"><span class="helper">Декларация<br>на LBI 12-24 кВ</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sizes">
+            <div class="wrapper">
+                <h2 class="headling">Размерные эскизы типичных исполнителей</h2>
+                <div class="columns">
+                    <div class="col-1-of-2">
+                        <a href="images/7.jpg" class="gallery-item-schemes"><img src="images/7.jpg" alt=""></a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <a href="images/8.jpg" class="gallery-item-schemes"><img src="images/8.jpg" alt=""></a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <a href="images/9.jpg" class="gallery-item-schemes"><img src="images/9.jpg" alt=""></a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <a href="images/10.jpg" class="gallery-item-schemes"><img src="images/10.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="m_hook">
+        <div class="wrapper">
+            <div class="helper-parent">
+                <div class="helper">
+                    <p>Отправьте Ваш запрос и получите индвидуальное предложение</p>
+                    <div class="send">
+                        <a href="#modal-form" class="modal button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a>
+                    </div>
+                    <div class="tel">
+                        <span>Позвонить:</span>
+                        <a href="#">+7 (921) 181-33-16</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="m_footer">
+        <div class="top">
+            <div class="wrapper">
+                <h1 class="logo"><a href="http://eltom-lbi.ru"></a></h1>
+                <div class="locate">
+                    <div class="helper">
+                        <p><span class="icon-locate"></span>Санкт-Петербург, ул. Бестужевская,<br>д. 41, А, помещение 22-Н</p>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="helper">
+                        <p><span class="icon-email"></span>Email:<br><a href="mailto:info@eltom-lbi.ru">info@eltom-lbi.ru</a></p>
+                    </div>
+                </div>
+                <div class="tel">
+                    <div class="helper">
+                        <div class="number">
+                            <a href="#">+7 (921) 181-33-16</a>
+                        </div>
+                        <div class="callback">
+                            <a href="#modal-form" class="modal">Заказать звонок</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper">
+                <div class="copyright">© 1992–2016 ГК «СТОРГЕ» Соответствие ИСО и ГОСТ ГК <a href="#">«<span>СТОРГЕ</span>»</a></div>
+                <div class="developed"><a href="http://pikmedia.ru/"></a></div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

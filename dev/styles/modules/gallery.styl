@@ -1,0 +1,206 @@
+.mfp-gallery
+  .mfp-content
+    width 980px
+    height 615px
+    overflow hidden
+    box-shadow 0 0 20px 5px rgba(0,0,0,.25)
+    background #fff
+    border 2px solid $blue
+    border-radius 5px
+.mfp-figure
+  max-height 100% !important
+  height 100%
+  background #fff !important
+  figure
+    height 100%
+    background #fff
+    text-align center
+    line-height 550px
+    img
+      max-height 100% !important
+      max-width 100% !important
+.mfp-img
+  padding 0 !important
+  padding-bottom 60px !important
+  display inline-block !important
+  vertical-align middle !important
+.mfp-content
+  max-height 100% !important
+.mfp-bg
+  opacity .5
+  position fixed !important
+.mfp-counter
+  display none
+
+.mfp-title
+  color $black
+  font-size 20px
+  text-align center
+  padding-right 0
+  padding-left 10px
+  padding-right 10px
+  position relative
+  top -20px
+.mfp-close
+  top 10px !important
+  right 10px !important
+  background url('../images/sprite.png') no-repeat 0 0 !important
+  width 15px !important
+  height 15px !important
+  font-size 0 !important
+  text-indent -9999px !important
+.mfp-arrow-left
+  background url('../images/sprite.png') no-repeat -30px 0 !important
+  width 30px !important
+  height 30px !important
+  margin-top -15px !important
+  left 50% !important
+  margin-left -460px !important
+  &:before, &:after
+    display none
+.mfp-arrow-right
+  background url('../images/sprite.png') no-repeat -90px 0 !important
+  width 30px !important
+  height 30px !important
+  margin-top -15px !important
+  right 50% !important
+  margin-right -460px !important
+  &:before, &:after
+    display none
+
+.g-hook
+  .mfp-content
+    height 930px
+  .mfp-bottom-bar
+    top auto
+    bottom 0
+  .mfp-img
+    width 100% !important
+    height 710px !important
+    padding-bottom 0 !important
+
+.modal-prob
+  #modal-problems
+    position relative
+    max-width 1000px
+    padding-bottom 60px
+    background #fff
+    margin-left auto
+    margin-right auto
+    padding-left 50px
+    padding-right 50px
+    overflow hidden
+    box-shadow 0 0 20px 5px rgba(0,0,0,.25)
+    background #fff
+    border 2px solid $blue
+    border-radius 5px
+
+
+#modal-form
+  position relative
+  max-width 570px
+  background #fff
+  margin-left auto
+  margin-right auto
+  overflow hidden
+  box-shadow 0 0 20px 5px rgba(0,0,0,.25)
+  background #fff
+  border 2px solid $blue
+  border-radius 5px
+  .mfp-close
+    background-image url("../images/close.png") !important
+    opacity 1 !important
+  input[type="file"]
+    z-index 999
+    line-height 0
+    font-size 50px
+    position absolute
+    opacity 0
+    cursor pointer
+    _cursor hand
+    margin 0
+    padding 0
+    left 0
+
+  .add-photo-btn
+    position relative
+    // overflow hidden
+    cursor pointer
+    display block
+    margin-top 20px
+    .file-found
+      width 140px
+      float right
+      margin-top 0
+      background none
+      border none
+      color #999999
+      cursor pointer
+      word-break break-word
+      &.added
+        width 100%
+        margin-top 5px
+    .attach-button
+      float left
+      cursor pointer
+      position relative
+      display block
+      width 207px
+      height 40px
+      line-height 40px
+      border-radius 5px
+      padding-left 40px
+      background $blue
+      color #fff
+      &:hover
+        background $blue - 5%
+      &:after
+        content ''
+        position absolute
+        left 14px
+        top 50%
+        background url('../images/sprite.png') no-repeat 0 -60px
+        width 15px
+        height 18px
+        margin-top -(@height/2)
+  .header
+    bold()
+    background $blue
+    color #fff
+    line-height 74px
+    text-align center
+    font-size 24px
+  form
+    background #f3f3f2
+    padding 40px 100px
+    textarea
+      resize none
+      height 150px
+    p
+      margin-bottom 0
+      color #999999
+    .attach
+      clearfix()
+    .button-send
+      display block
+      margin-top 25px
+      width 150px
+      text-align center
+      margin-left auto
+      margin-right auto
+    input, textarea
+      regular()
+      margin-top 10px
+      width 100%
+      font-size 16px
+      line-height 16px
+      padding 15px 10px
+      border 2px solid #bfd5df
+      border-radius 5px
+      transition border-color .25s ease-out
+      &:focus
+        transition border-color .5s ease-in
+        border-color $blue
+
+
+

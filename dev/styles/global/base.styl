@@ -151,18 +151,19 @@ b, strong
     left 50%
     height 1px
     width 50px
+    margin-left -(@width/2)
     background $red
   &:before
-    bottom 28px
+    bottom 50px
   &:after
-    bottom 25px
+    bottom 53px
   &.large
     font-size 44px
     padding 50px 0
     &:before
-      bottom 32px
+      bottom 42px
     &:after
-      bottom 35px
+      bottom 45px
 
 .button-send
   position relative
@@ -217,3 +218,45 @@ b, strong
       box-shadow inset 1px 2px 3px 0px rgb(187, 24, 30)
 
 
+ul.blue-markers
+  li
+    position relative
+    padding-left 20px
+    margin-bottom 7px
+    &:after
+      icon()
+      content '\e90a'
+      color $blue
+      position absolute
+      left 0
+      top 0
+    span.red
+      color $red
+      bold()
+      font-size 18px
+    span.blue
+      color $blue
+      bold()
+      font-size 18px
+    li
+      padding-left 10px
+      &:after
+        content ''
+        width 4px
+        height 4px
+        position absolute
+        left 0
+        top 7px
+        border-radius 50%
+        background $black
+
+p.large
+  regular()
+  text-align center
+  font-size 20px
+  margin-bottom 30px
+
+.small-hide
+  display inline
+  @media screen and (max-width: 1024px)
+    display none

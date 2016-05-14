@@ -1,4 +1,5 @@
-.m_header
+.m_header,
+.m_footer
   position relative
   height 122px
   box-shadow 0 0 5px rgba(0,0,0,.25)
@@ -86,3 +87,32 @@
         border-bottom 1px dashed $link
         &:hover
           border-color #fff
+.m_footer
+  height 200px
+  gradient-gray()
+  .top
+    height 122px
+  .bottom
+    height 78px
+    line-height 78px
+    .wrapper
+      border-top 1px solid $border
+    .copyright
+      float left
+      a
+        color $link
+        span
+          border-bottom 1px solid #b1bbcc
+          display inline-block
+          vertical-align middle
+          line-height 14px
+        &:hover span
+          border-color transparent
+    .developed
+      float right
+      a
+        display inline-block
+        vertical-align middle
+        background: url('../images/sprite.png') no-repeat -90px -60px;
+        width: 80px;
+        height: 21px;

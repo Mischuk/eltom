@@ -1,0 +1,71 @@
+.m_s8
+  .docs
+    padding-bottom 60px
+    .download
+      li
+        display inline-block
+        vertical-align top
+        padding-right 30px
+        width 240px
+        margin-bottom 40px
+        @media screen and (max-width: 1024px)
+          width 32%
+          margin-right 0
+        a
+          display table
+          position relative
+          padding-left 50px
+          color $black
+          height 55px
+          .helper
+            display table-cell
+            vertical-align middle
+          &:hover
+            .helper
+              text-decoration underline
+          &.pdf:after
+            content ''
+            background: url('../images/sprite.png') no-repeat 0 -90px;
+            width: 43px;
+            height: 55px;
+            position absolute
+            left 0
+            top 0
+          &.xls:after
+            content ""
+            background: url('../images/sprite.png') no-repeat -60px -90px;
+            width: 43px;
+            height: 55px;
+            position absolute
+            left 0
+            top 0
+          &.doc:after
+            content ""
+            background: url('../images/sprite.png') no-repeat -120px -90px;
+            width: 43px;
+            height: 55px;
+            position absolute
+            left 0
+            top 0
+  .sizes
+    background #f4f4f4
+    padding-bottom 60px
+    a
+      display block
+      width 475px
+      height 340px
+      line-height 340px
+      text-align center
+      border 1px solid $border
+      border-radius 5px
+      overflow hidden
+      margin-bottom 30px
+      @media screen and (max-width: 1024px)
+        width 96%
+        margin-bottom 4%
+        margin-left auto
+        margin-right auto
+      img
+        display inline-block
+        vertical-align middle
+        max-width 100%

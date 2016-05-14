@@ -15,6 +15,9 @@
     border 3px solid $blue
     border-radius 5px
     padding 10px
+    @media screen and (max-width: 1024px)
+      width 25%
+      margin-right 2%
     li
       padding-left 13px
       position relative
@@ -46,6 +49,8 @@
   article
     float left
     width 735px
+    @media screen and (max-width: 1024px)
+      width 73%
     > .image
       float left
       width 360px
@@ -53,6 +58,9 @@
       line-height 390px
       border 1px solid $border
       border-radius 5px
+      overflow hidden
+      @media screen and (max-width: 1024px)
+        width 40%
       > a
         display block
         width 100%
@@ -61,11 +69,14 @@
         img
           display inline-block
           vertical-align middle
+          max-width 100%
     > .description
       position relative
       float right
       width 360px
       height 390px
+      @media screen and (max-width: 1024px)
+        width 57%
       p
         margin-top 0
         margin-bottom 20px
