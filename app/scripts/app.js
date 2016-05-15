@@ -92,7 +92,7 @@ $(document).ready(function() {
             '<div class="mfp-img"></div>'+
             '<div class="mfp-bottom-bar">'+
               '<div class="mfp-title"></div>'+
-              '<div class="m_hook"><div class="wrapper"><div class="helper-parent"><div class="helper"><p>Отправьте Ваш запрос и получите индвидуальное предложение</p><div class="send"><a href="#" class="button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a></div><div class="tel"><span>Позвонить:</span><a href="#">+7 (921) 181-33-16</a></div></div></div></div></div>'+
+              '<div class="m_hook"><div class="wrapper"><div class="helper-parent"><div class="helper"><p>Отправьте Ваш запрос и получите индвидуальное предложение</p><div class="send"><a href="#" id="m-trigger" class="button-send"><span class="bg-normal"></span><span class="bg-hover"></span><span class="icon-send"></span><span class="label">Отправить запрос</span></a></div><div class="tel"><span>Позвонить:</span><a href="#">+7 (921) 181-33-16</a></div></div></div></div></div>'+
             '</div>'+
           '</div>'
     },
@@ -101,6 +101,15 @@ $(document).ready(function() {
       tPrev: 'Предыдущая', // title for left button
       tNext: 'Следующая', // title for right button
       tCounter: '<span class="mfp-counter">%curr% из %total%</span>' // markup of counter
+    },
+    callbacks: {
+      open: function() {
+        var magnificPopup = $.magnificPopup.instance;
+        $('#m-trigger').on('click', function(){
+          magnificPopup.close();
+          $('.m_header .modal').trigger('click');
+        });
+      }
     }
   });
 
